@@ -1,0 +1,86 @@
+:root {
+    --purple: #3e0249;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    color: var(--purple); /*color of text inside the body */
+    font-family: sans-serif;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes example{
+    20%{background-color: tomato;}
+    70%{background-color: khaki;}
+    100%{background-color: steelblue;}
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+  
+    font-size: 54px;
+  }
+  h1 {
+    animation: bounceIn 2s ease-in;
+  } 
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;/* to display content in the center of the screen*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #gameboard { 
+    margin-top: 40px;
+    display: flex;/* to display content in the center of the screen*/
+    flex-wrap: wrap;
+    width: 450px;
+  }
+  
+  .box {
+    height: 150px;
+    width: 150px;
+    display: flex;/* to display content in the center of the screen*/
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;/* size of the element in the box*/
+    color: var(--purple);
+  }
+  
+  .box:hover {
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--purple);
+    color:gold;
+    border-color: var(--purple);
+    font-size: 18px;
+    transition: 200ms transform;/*time taken to transform*/
+  }
+  
+  button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);/*moves the button upwards when hover*/
+  }
